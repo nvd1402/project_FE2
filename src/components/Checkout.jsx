@@ -209,7 +209,7 @@ const Checkout = () => {
           <div className="col-md-12">
             <div className="d-flex justify-content-between border-bottom pb-3">
               <div>Giá:</div>
-              <div>{grandTotal()} VND</div>
+              <div>{subTotal()} VND</div>
             </div>
             <div className="d-flex justify-content-between border-bottom pb-3">
               <div>Phí vận chuyển:</div>
@@ -217,7 +217,7 @@ const Checkout = () => {
             </div>
             <div className="d-flex justify-content-between border-bottom pb-3">
               <div><strong>Tổng tiền:</strong></div>
-              <div>{subTotal()} VND</div>
+              <div>{grandTotal()} VND</div>
             </div>
           </div>
             </div>
@@ -226,7 +226,7 @@ const Checkout = () => {
                     <input type="radio"
                     onClick={handlePaymentMethod}
                      defaultChecked={paymentMethod == 'paypal'} className='pe-2'  value={'paypal'} />
-                    <label className='form-label ps-2' htmlFor="paypal">PayPal</label>
+                    <label className='form-label ps-2' htmlFor="paypal">VNPAY</label>
 
                     <input type="radio"
                     onClick={handlePaymentMethod}
@@ -251,3 +251,4 @@ const Checkout = () => {
 }
 
 export default Checkout
+

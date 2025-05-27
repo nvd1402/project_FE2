@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import AoThun from '../assets/images/AoThun.jpeg'
-import { adminToken, apiUrl } from './Http'
+import { apiUrl } from './Http'
 import { Link } from 'react-router-dom';
 
 const formatPrice = (price) => {
@@ -15,8 +15,7 @@ const LatestProduct = () => {
     const res = await fetch(`${apiUrl}/get-latest-products`,{
       method: 'GET',
       headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${adminToken()}`,
+        'Content-Type': 'application/json'
       }
     })
     const result = await res.json();

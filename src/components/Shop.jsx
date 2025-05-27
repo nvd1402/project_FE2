@@ -13,9 +13,8 @@ const Shop = () => {
     return category ? category.split(','):[];
   });
   const formatPrice = (price) => {
-    if (typeof price !== 'number') return 'Đang cập nhật';
-    return price.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
-  };
+  return price.toLocaleString('vi-VN') + ' đ';
+}
   const [brandChecked, setBrandChecked] = useState(() =>{
     const brand = searchParams.get('brand');
     return brand ? brand.split(','):[];

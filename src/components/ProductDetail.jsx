@@ -22,9 +22,8 @@ import { toast } from 'react-toastify';
 
 
 const formatPrice = (price) => {
-  if (typeof price !== 'number') return 'Đang cập nhật';
-  return price.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
-};
+  return price.toLocaleString('vi-VN') + ' đ';
+}
 
 const ProductDetail = () => {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);

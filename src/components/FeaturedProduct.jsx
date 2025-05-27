@@ -72,7 +72,7 @@
 
 // export default FeaturedProduct;
 import React, { useEffect, useState } from 'react'
-import { adminToken, apiUrl } from './Http'
+import { apiUrl } from './Http'
 import { Link } from 'react-router-dom';
 
 // Hàm định dạng giá
@@ -88,8 +88,7 @@ const FeaturedProduct = () => {
       const res = await fetch(`${apiUrl}/get-featured-products`, {
         method: 'GET',
         headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${adminToken()}`,
+          'Content-Type': 'application/json'
         }
       });
 
